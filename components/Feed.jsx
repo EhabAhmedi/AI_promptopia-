@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import PromptCard from "./PromptCard";
+import Image from "next/image";
+
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -76,7 +78,13 @@ const Feed = () => {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Image
+    src="/assets/icons/loader.svg"
+    alt="logo"
+    width={80}
+    height={80}
+    className="object-contain mt-20"
+  />;
   }
 
   if (error) {

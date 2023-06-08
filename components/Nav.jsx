@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Nav = () => {
 
@@ -11,7 +13,9 @@ const Nav = () => {
 
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
-
+  useEffect(()=>{
+    Aos.init({duration:1500});
+  },[])
   useEffect(() => {
     const setUpProviders = async () => {
       const response = await getProviders();
@@ -22,7 +26,7 @@ const Nav = () => {
     setUpProviders();
   }, [])
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
+    <nav className="flex-between w-full mb-16 pt-3" data-aos="fade-right">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logo.svg"
@@ -32,7 +36,14 @@ const Nav = () => {
           className="object-contain"
         />
       </Link>
-      <p className="logo-text">Promptopia</p>
+      <Image
+          src="/assets/images/mid.png"
+          alt="logo"
+          width={100}
+          height={100}
+          className="logo-text"
+        />
+      
 
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">

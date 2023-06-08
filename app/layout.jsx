@@ -1,11 +1,17 @@
+
+
 import React from 'react'
 import '@styles/global.css'
 import Nav from '@components/Nav'
 import Provider from "@components/Provider"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export const metadata = {
   title: "Promptopia",
   description: "Discover and share AI prompts"
+  
 }
 
 const RootLayout = ({children}) => {
@@ -13,8 +19,8 @@ const RootLayout = ({children}) => {
   <html lang="en">
     <body>
       <Provider>
-        <div className="main">
-          <div className="gradient" />
+        <div className="main" >
+          <div className="gradient"  />
         </div>
 
         <main className="app">
