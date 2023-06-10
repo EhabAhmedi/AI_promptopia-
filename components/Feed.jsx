@@ -100,7 +100,7 @@ const Feed = () => {
       <form className="relative w-full flex-center">
         <input 
         data-aos="zoom-out"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
           type="text"
           placeholder="Search for a tag or a username"
           value={searchText}
