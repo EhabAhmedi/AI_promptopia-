@@ -2,9 +2,13 @@
 import { useState, useEffect, useCallback } from "react";
 import PromptCard from "./PromptCard";
 import Image from "next/image";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const PromptCardList = ({ data, handleTagClick }) => {
+  useEffect(()=>{
+    Aos.init({duration:1500});
+  },[])
   return (
     <div className="mt-16 prompt_layout">
       {data.map((post) => (
@@ -94,7 +98,9 @@ const Feed = () => {
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
-        <input
+        <input 
+        data-aos="zoom-out"
+        data-aos-duration="1500"
           type="text"
           placeholder="Search for a tag or a username"
           value={searchText}

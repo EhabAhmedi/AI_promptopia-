@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
+
+  useEffect(()=>{
+    Aos.init({duration:100});
+  },[])
+
+
   const { data: session } = useSession();
   const pathName = usePathname();
   const router = useRouter();
@@ -27,7 +35,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   };
 
   return (
-    <div className='prompt_card'>
+    <div className='prompt_card' data-aos="zoom-down" data-aos-duration="500">
       <div className='flex justify-between items-start gap-5'>
         <div
           className='flex-1 flex justify-start items-center gap-3 cursor-pointer'

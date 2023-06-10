@@ -26,7 +26,10 @@ const Nav = () => {
     setUpProviders();
   }, [])
   return (
-    <nav className="flex-between w-full mb-16 pt-3" data-aos="fade-right">
+    <nav className="flex-between w-full mb-16 pt-3" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1000"
+    >
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logo.svg"
