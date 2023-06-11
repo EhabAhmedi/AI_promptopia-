@@ -36,7 +36,7 @@ const Nav = () => {
           alt="logo"
           width={30}
           height={30}
-          className="object-contain"
+          className="object-contain  "
         />
         <p className="logo_text">Promptopia</p>
       </Link>
@@ -61,7 +61,7 @@ const Nav = () => {
                 src={session?.user.image}
                 width={37}
                 height={37}
-                className="rounded-full"
+                className="rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... "
                 alt="profile"
               />
             </Link>
