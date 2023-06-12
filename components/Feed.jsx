@@ -92,13 +92,7 @@ const Feed = () => {
   }
 
   if (error) {
-    return <Image
-    src="/assets/icons/loader.svg"
-    alt="logo"
-    width={80}
-    height={80}
-    className="object-contain mt-20"
-  />;
+    return <p>Please refresh: {error}</p>;
     
   }
 
