@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
   useEffect(()=>{
-    Aos.init({duration:3000});
+    Aos.init({duration:1500});
   },[])
 
 
@@ -35,7 +35,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   };
 
   return (
-    <div className='prompt_card' data-aos="zoom-down" data-aos-duration="2500">
+    <div className='prompt_card' data-aos="zoom-out" data-aos-duration="1000">
       <div className='flex justify-between items-start gap-5'>
         <div
           className='flex-1 flex justify-start items-center gap-3 cursor-pointer'
